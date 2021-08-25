@@ -7,8 +7,8 @@ unsigned char SPI_MasterTransmit (char outData)
 {
     SPDR = outData;
     
-    while (!(SPSR & (1<<SPIF))); //ожидание окончания передачи
-    return SPDR;                 //возвращаем принятый на slave байт
+    while (!(SPSR & (1<<SPIF))); //РѕР¶РёРґР°РЅРёРµ РѕРєРѕРЅС‡Р°РЅРёСЏ РїРµСЂРµРґР°С‡Рё
+    return SPDR;                 //РІРѕР·РІСЂР°С‰Р°РµРј РїСЂРёРЅСЏС‚С‹Р№ РЅР° slave Р±Р°Р№С‚
 }
 
 void main(void)
